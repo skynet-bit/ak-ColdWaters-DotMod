@@ -5,31 +5,31 @@ PlayerHUD=hud/default_usn
 Length=153.9
 Beam=18
 HullHeight=0.12
-Displacement=9500
+Displacement=95000
 Crew=303
-Range=6000
+Range=60000
 HullNumbers=DDG-79.png,DDG-80.png
-AircraftNumbers=2
+AircraftNumbers=4
 AircraftTypes=usn_sh60b
 AircraftSpawnPoints=0.000,0.0628,-0.957
 AircraftSpawnOrientation=4,0,0
 AircraftTransitionPoints=-0.6,0.7,-1.3
 
 [Movement]
-SurfaceSpeed=34
-SubmergedSpeed=34
-TelegraphSpeeds=-5,0,5,10,15,20,34
-AccelerationRate=0.38
-DecelerationRate=0.28
+SurfaceSpeed=120
+SubmergedSpeed=120
+TelegraphSpeeds=-5,0,5,10,50,80,120
+AccelerationRate=99
+DecelerationRate=99
 RudderTurnRate=1.5
-TurnRate=1.05
+TurnRate=40
 PivotPointTurning=0.0
 DiveRate=0
 SurfaceRate=5
 BallastRate=0
 Waterline=0.0
 SubmergedAt=0.2
-CavitationParameters=20,-220
+CavitationParameters=1,-220
 PropRotationSpeed=150,-150
 TestDepth=40
 EscapeDepth=787
@@ -37,12 +37,12 @@ PeriscopeDepthInFeet=1
 Diesel=TRUE
 
 [Acoustics & Sensors]
-SelfNoise=160
-ActiveSonarReflection=25
+SelfNoise=0
+ActiveSonarReflection=0
 ActiveSonarModel=usn_sqs_53
 PassiveSonarModel=usn_sqs_53
 TowedArrayModel=usn_sqr_19
-AnechoicCoating=FALSE
+AnechoicCoating=TRUE
 RADAR=usn_spy_1d
 RADARSignature=SMALL
 TowedArrayPosition=0,0.0534,-1.10738
@@ -51,7 +51,7 @@ TowedDecoyPosition=0.06,0.0338,-1.1
 //Usage - TowedDecoySettings=DEFAULT or MaterialParameters=resolution,radius,maxPoints,maxDelta,incrementDown,targetDepth,sinkRateMultiplier,retractRateMultiplier
 TowedDecoySettings=4,0.0008,456,0.035,true,999.72,0.75,25
 TowedDecoyBody=nixie
-TowedDecoyCount=10
+TowedDecoyCount=1000
 
 [Weapon Systems]
 NavalGuns=usn_mark_45_shell
@@ -60,57 +60,57 @@ NavalGunFiringArcBearingMax=120
 NavalGunRestAngle=0
 NavalGunParticle=weapons/assets/SmallMuzzleFlash
 NavalGunSmokeParticle=weapons/assets/SmallMuzzleSmoke
-NavalGunShellNumbers=680
+NavalGunShellNumbers=68000
 
 TorpedoTypes=usn_mk46_mod_5
-TorpedoNumbers=40
+TorpedoNumbers=4000
 TorpedoTubes=7
 TubeConfig=1,1,1,1,1,1,1
 TorpedoTubeSize=324,324,324,324,324,324,533
-TubeReloadTime=180
+TubeReloadTime=0.1
 
 VLSTorpedoTypes=usn_rum-139,usn_rim-66m,usn_rim-156a,usn_tlam
-VLSTorpedoNumbers=15,28,18,10
-VLSMaxDepthToFire=300
-VLSMaxSpeedToFire=40
+VLSTorpedoNumbers=1500,2800,1800,1000
+VLSMaxDepthToFire=3000
+VLSMaxSpeedToFire=4000
 
 [Defenses]
-Anti-MissileGunHitProbability=0.030
-Anti-MissileGunRange=3300
+Anti-MissileGunHitProbability=1
+Anti-MissileGunRange=9300
 Anti-MissileGunFiringArcStart=-97,50
 Anti-MissileGunFiringArcFinish=97,-50
 Anti-MissileGunRestAngle=0,180
 Anti-MissileGunUsesRADAR=0,1
 Anti-MissileRADARRestAngle=-90,90
 Anti-MissileGunParticle=ships/particles/usn_phalanx_burst
-PlayerWarningRange=3300
-JammingRange=4000
+PlayerWarningRange=33000
+JammingRange=40000
 
 ChaffType=wp_chaff
-ChaffProbability=0.99
-NumberChaffLaunched=2
+ChaffProbability=1
+NumberChaffLaunched=200
 
 Special=AEGIS
 AntiAirMissileType=usn_ugm84
-AntiAirMissilesNumbers=0
-AntiAirMissilesPerTarget=2
-AntiAirMissileReloadTime=3
+AntiAirMissilesNumbers=3000
+AntiAirMissilesPerTarget=4
+AntiAirMissileReloadTime=0.001
 AntiAirMissileLaunchDepth=300
 AntiAirMissileLaunchPoints=-0.005,0.13,-0.486
 AntiAirMissileLaunchPointsRotation=-35,-90,0
 
 AutoMissileType=usn_rim-66m
-AutoMissilesNumbers=25
-AutoMissilesPerTarget=1
-AutoMissileReloadTime=5
+AutoMissilesNumbers=2500
+AutoMissilesPerTarget=4
+AutoMissileReloadTime=0.001
 AutoMissileScanTime=1
 AutoMissileLaunchDepth=15
 AutoMissileLaunchPoints=0.0390948500,0.0636888700,0.5547915000|0.0390948500,0.0636888700,0.5730448000|0.0390948500,0.0636888700,0.5887100000|0.0287422100,0.0636888700,0.5393987000|0.0287422100,0.0636888700,0.5547915000|0.0287422100,0.0636888700,0.5730448000|0.0287422100,0.0636888700,0.5887100000|0.0186620000,0.0636888700,0.5393987000|-0.0288784300,0.0988839900,-0.6503290000|-0.0288784300,0.0988839900,-0.6320757000|-0.0288784300,0.0988839900,-0.6164104000|-0.0388224200,0.0988839900,-0.6657217000|-0.0388224200,0.0988839900,-0.6503290000|-0.0388224200,0.0988839900,-0.6320757000|-0.0187982200,0.0988839900,-0.6164104000|-0.0288784300,0.0988839900,-0.6657217000
 AutoMissileLaunchPointsRotation=-90,0,0
 
 NoisemakerName=surf_noisemaker
-NumberOfNoisemakers=30
-NoisemakerReloadTime=15
+NumberOfNoisemakers=3000
+NoisemakerReloadTime=0.001
 
 [Subsystems]
 LabelPosition=370,39
@@ -238,7 +238,7 @@ MeshSternWake=usn_cg_belknap_sternwake
 //RADARs
 RADARDirection=1
 MeshRotation=0,0,0
-RADARSpeed=100
+RADARSpeed=1000
 
 //Flags
 MeshPosition=0,-0.0728,0.125
